@@ -43,12 +43,12 @@
             <p class="text-[#6474BB] font-medium"><span>8</span> Jobs</p>
         </section>
         <section class="space-x-1 mb-5">
-            <button id="all-jobs-btn" class="btn btn-info text-xs">All</button>
-            <button id="interview-btn" class="btn text-[#6474BB] text-xs font-medium">Interview</button>
-            <button id="rejected-btn" class="btn text-[#6474BB] text-xs font-medium">Rejected</button>
+            <button id="all-jobs-btn" class="btn btn-info text-xs active">All</button>
+            <button id="interview-btn" class="btn text-[#6474BB] text-xs font-medium active">Interview</button>
+            <button id="rejected-btn" class="btn text-[#6474BB] text-xs font-medium active">Rejected</button>
         </section>
         <!--Available jobs Section-->
-        <section class="hidden">
+        <section id="jobs-container">
             <section class="flex justify-between border border-gray-100 shadow-md px-3 py-5 mb-2">
                 <div>
                     <h3 class="text-lg font-bold">Mobile First Corp</h3>
@@ -178,13 +178,20 @@
         </section>
 
         <!--InterView and Rejected default-->
-        <section id="no-jobs-container" class="w-full mx-auto">
-            <figure><img src="assets/jobs.png" alt=""></figure>
-            <h1>No Jobs available</h1>
-            <p>Check back soon for new job opportunities</p>
+        <section id="no-jobs-container" class="w-1/2 mx-auto mt-10 hidden">
+            <div class="card bg-base-100 w-96 shadow-sm space-y-2">
+                <figure>
+                    <img src="assets/jobs.png" />
+                </figure>
+                <div class="card-body space-y-2">
+                    <h2 class="card-title">No jobs available</h2>
+                    <p class="text-[#6464BB]">Check back soon for new job opportunities</p>
+                </div>
+            </div>
         </section>
     </main>
 
+    <script src="js/utilities.js"></script>
     <script src="js/index.js"></script>
 </body>
 
