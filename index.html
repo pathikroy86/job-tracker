@@ -43,24 +43,30 @@
             <p class="text-[#6474BB] font-medium"><span>8</span> Jobs</p>
         </section>
         <section class="space-x-1 mb-5">
-            <button id="all-jobs-btn" class="btn btn-info text-xs active">All</button>
-            <button id="interview-btn" class="btn text-[#6474BB] text-xs font-medium active">Interview</button>
-            <button id="rejected-btn" class="btn text-[#6474BB] text-xs font-medium active">Rejected</button>
+            <button onclick="activeBtn('all-jobs-btn')" id="all-jobs-btn"
+                class="btn btn-info text-xs active">All</button>
+            <button onclick="activeBtn('interview-btn')" id="interview-btn"
+                class="btn text-[#6474BB] text-xs font-medium active">Interview</button>
+            <button onclick="activeBtn('rejected-btn')" id="rejected-btn"
+                class="btn text-[#6474BB] text-xs font-medium active">Rejected</button>
         </section>
         <!--Available jobs Section-->
-        <section id="jobs-container">
-            <section class="flex justify-between border border-gray-100 shadow-md px-3 py-5 mb-2 common">
+        <section id="all-jobs-container" class="block">
+            <section id="mobile-first"
+                class="flex justify-between border border-gray-100 shadow-md px-3 py-5 mb-2 common">
                 <div>
                     <h3 class="text-lg font-bold">Mobile First Corp</h3>
                     <p class="text-[#6474BB] mb-2">React Native Developer</p>
                     <p class="text-[#6474BB] text-sm mb-2">Remote: Full-time : $130,000 - $175,000</p>
-                    <button onclick="jobCount()" class="btn">Not Applied</button>
+                    <button id="mobile-first-applied" class="btn">Not Applied</button>
                     <p class="text-xs mb-2">Build cress-platform mobile applications using React Native. Work on
                         products
                         used by millions of
                         users worldwide.</p>
-                    <button class="btn btn-outline btn-success">Interview</button>
-                    <button class="btn btn-outline btn-error">Rejected</button>
+                    <button data-job-id="mobile-first" data-action="interview"
+                        class="btn btn-outline btn-success">Interview</button>
+                    <button data-job-id="mobile-first" data-action="rejected"
+                        class="btn btn-outline btn-error">Rejected</button>
                 </div>
                 <div>
                     <button class="btn"><i class="fa-solid fa-trash-can"></i></button>
@@ -190,18 +196,18 @@
             </div>
         </section>
         <!--Interview jobs section-->
-        <section id="interview-container hidden">
+        <section id="interview-container" class="hidden">
 
         </section>
         <!--Rejected jobs section-->
-        <section id="rejected-container hidden">
+        <section id="rejected-container" class="hidden">
 
         </section>
-    </main>
 
-    <script src="js/utilities.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/interview.js"></script>
+        <script src="js/utilities.js"></script>
+        <script src="js/interview.js"></script>
+        <script src="js/index.js"></script>
+
 </body>
 
 </html>

@@ -1,34 +1,43 @@
 document.getElementById('all-jobs-btn').addEventListener('click', function () {
-    const jobs = jobCount();
-    if (jobs) {
-        document.getElementById('jobs-container').classList.remove('hidden');
+    const allJobsContainer = document.getElementById('all-jobs-container');
+    const noJobsContainer = document.getElementById('no-jobs-container');
+    console.log(allJobsContainer.children.length);
+    if (allJobsContainer.children.length === 0) {
+        allJobsContainer.classList.add('hidden');
+        noJobsContainer.classList.remove('hidden');
     }
     else {
-        document.getElementById('no-jobs-container').classList.add('hidden');
+        allJobsContainer.classList.remove('hidden');
+        noJobsContainer.classList.add('hidden');
     }
-    activeBtn('all-jobs-btn');
 })
 document.getElementById('interview-btn').addEventListener('click', function () {
-    const jobs = interviewCount();
-    if (jobs) {
-        document.getElementById('jobs-container').classList.add('hidden');
-        document.getElementById('interview-container').classList.remove('hidden');
+    const allJobsContainer = document.getElementById('all-jobs-container');
+    allJobsContainer.classList.add('hidden');
+    const interviewContainer = document.getElementById('interview-container');
+    const noJobsContainer = document.getElementById('no-jobs-container');
+    console.log(interviewContainer.children.length);
+    if (interviewContainer.children.length === 0) {
+        interviewContainer.classList.add('hidden');
+        noJobsContainer.classList.remove('hidden');
     }
     else {
-        document.getElementById('jobs-container').classList.add('hidden');
-        document.getElementById('no-jobs-container').classList.remove('hidden');
+        interviewContainer.classList.remove('hidden');
+        noJobsContainer.classList.add('hidden');
     }
-    activeBtn('interview-btn');
 })
 document.getElementById('rejected-btn').addEventListener('click', function () {
-    const jobs = rejectedCount();
-    if (jobs) {
-        document.getElementById('jobs-container').classList.add('hidden');
-        document.getElementById('rejected-container').classList.remove('hidden');
+    const allJobsContainer = document.getElementById('all-jobs-container');
+    allJobsContainer.classList.add('hidden');
+    const rejectedContainer = document.getElementById('rejected-container');
+    const noJobsContainer = document.getElementById('no-jobs-container');
+    console.log(rejectedContainer.children.length);
+    if (rejectedContainer.children.length === 0) {
+        rejectedContainer.classList.add('hidden');
+        noJobsContainer.classList.remove('hidden');
     }
     else {
-        document.getElementById('jobs-container').classList.add('hidden');
-        document.getElementById('no-jobs-container').classList.remove('hidden');
+        rejectedContainer.classList.remove('hidden');
+        noJobsContainer.classList.add('hidden');
     }
-    activeBtn('rejected-btn');
 })
