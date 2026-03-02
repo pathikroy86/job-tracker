@@ -20,3 +20,12 @@ function switchContainer(destination, id, applied) {
     destinationContainer.appendChild(content);
 }
 
+function deleteElement(id) {
+    const totalJobsField = document.getElementById('total-job-count');
+    let totalJobs = parseInt(totalJobsField.innerText);
+    const decreased = totalJobs - 1;
+    totalJobsField.innerText = decreased;
+    const container = document.getElementById(id);
+    container.remove();
+}
+
