@@ -9,4 +9,4 @@
 
 4. Event Delegation is the process to handle event listeners precisely. When we include an event listener to a parent, through it we can easliy handle multiple events from the child. So, we don't need to use multiple listeners for a single parent. Code looks cleaner.
 
-5. The main difference is that, event.preventDefault() stops the default behavior of the browser, but event.stopPropagation() stops the event to travel the whole DOM.
+5. The main difference is that, event.preventDefault() stops the default behavior of the browser, but event.stopPropagation() stops the event to travel through the whole DOM.
